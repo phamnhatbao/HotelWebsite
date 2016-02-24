@@ -1,0 +1,46 @@
+ul.tabs{
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+}
+ul.tabs li{
+	color: $text-default-heading;
+	position: relative;
+	background: none;
+	display: inline-block;
+	padding: 10px 15px;
+	cursor: pointer;
+	width: 100%;
+
+	&:before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		bottom: 0;
+		left: 0;
+		background-color: $btn-hover;
+		visibility: hidden;
+		@include transform(scaleX(0));
+		@include transition(all, .3s, ease-in-out, 0s);
+	}
+
+	&:hover, &.current {
+		color: $text-hover-heading;
+	}
+
+	&:hover:before, &.current:before {
+		visibility: visible;
+		@include transform(scaleX(1));
+	}
+}
+
+.tab-content{
+	display: none;
+	border-left: 1px solid #ccc;
+	padding: 15px;
+}
+
+.tab-content.current{
+	display: inherit;
+}

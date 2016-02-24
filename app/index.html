@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hotel booking</title>
+	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="vendor/OwlCarousel/css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="vendor/OwlCarousel/css/owl.theme.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<style type="text/css">
+	.owl-carousel .item {
+	    height: 10rem;
+	    background: #4DC7A0;
+	    padding: 1rem;
+	}
+
+	.owl-carousel .item h4 {
+	    color: #FFF;
+	    font-weight: 400;
+	    margin-top: 0rem;
+	}
+	</style>
+</head>
+<body ng-app="store" ng-controller="appController">
+	<header id="header" header-directive></header>
+    <section>
+    	<div class="container">
+    		<div  ng-repeat="dt in data" class="col-md-6 col-sm-12" rooms-directive data="dt">
+    		</div>
+    	</div>
+    </section>
+    
+    <footer-directive></footer-directive>
+    
+    <script type="text/javascript" src="vendor/jquery/js/jquery.js"></script>
+	<script type="text/javascript" src="vendor/OwlCarousel/js/owl.carousel.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></script>
+	<!--Angular js-->
+	<script type="text/javascript" src="vendor/angular/js/angular.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+	<!---->
+	<script type="text/javascript">
+	    $(document).ready(function(){
+	    	$('.owl-carousel').owlCarousel({
+			    loop:true,
+			    margin:10,
+			    responsiveClass:true,
+			    autoplay: true,
+			    responsive:{
+			        0:{
+			            items:1
+			        },
+			        600:{
+			            items:3
+			        },
+			        1000:{
+			            items:5
+			        }
+			    }
+			});
+	    });
+	</script>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Hotel booking</title>
+
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="vendor/OwlCarousel/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="vendor/OwlCarousel/css/owl.theme.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/jquery-ui/css/jquery-ui.css">
+
+    <link rel="stylesheet" type="text/css" href="vendor/Camera/css/camera.css">
+
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+	<style type="text/css">
+	.owl-carousel .item {
+	    height: 10rem;
+	    background: #4DC7A0;
+	    padding: 1rem;
+	}
+
+	.owl-carousel .item h4 {
+	    color: #FFF;
+	    font-weight: 400;
+	    margin-top: 0rem;
+	}
+	</style>
+</head>
+<body ng-app="store" ng-controller="appController">
+	<header id="header" header-directive></header>
+
+    <!-- ROOM DETAIL -->
+    <section class="section-room-detail">
+        <div class="container">
+            
+            <!-- DETAIL -->
+            <div class="room-details">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <!--Gallery Image-->
+                        <div class="gallery-image">
+				            <div data-thumb="images/thumbs/thumbs.jpg" data-src="images/room-1.jpg">
+				                <div class="camera_caption fadeFromBottom">
+				                    Camera is a responsive/adaptive slideshow. <em>Try to resize the browser window</em>
+				                </div>
+				            </div>
+				            <div data-thumb="images/thumbs/thumbs.jpg" data-src="images/room-2.jpg">
+				                <div class="camera_caption fadeFromBottom">
+				                    It uses a light version of jQuery mobile, <em>navigate the slides by swiping with your fingers</em>
+				                </div>
+				            </div>
+				            <div data-thumb="images/thumbs/thumbs.jpg" data-src="images/room-3.jpg">
+				                <div class="camera_caption fadeFromBottom">
+				                    <em>It's completely free</em> (even if a donation is appreciated)
+				                </div>
+				            </div>
+				            <div data-thumb="images/thumbs/thumbs.jpg" data-src="images/room-4.jpg">
+				                <div class="camera_caption fadeFromBottom">
+				                    Camera slideshow provides many options <em>to customize your project</em> as more as possible
+				                </div>
+				            </div>
+				            <div data-thumb="images/thumbs/thumbs.jpg" data-src="images/room-1.jpg">
+				                <div class="camera_caption fadeFromBottom">
+				                    It supports captions, HTML elements and videos and <em>it's validated in HTML5</em> (<a href="javascript:void(0);" target="_blank">have a look</a>)
+				                </div>
+				            </div>
+				            <div data-thumb="images/thumbs/thumbs.jpg" data-src="images/room-2.jpg">
+				                <div class="camera_caption fadeFromBottom">
+				                    Different color skins and layouts available, <em>fullscreen ready too</em>
+				                </div>
+				            </div>
+				        </div>
+				        <!-- End Gallery Image -->
+                    </div>
+
+                    <div class="col-lg-3">
+
+                        <!-- FORM BOOK -->
+                        <div class="booking">
+                            <div class="booking-info">
+                                <img src="images/icon-logo.png" alt="" class="icon-logo">
+                                
+                                <h6><b>BOOKING ROOM FROM</b></h6>
+                                
+                                <p class="price">
+                                    <span class="amount">$260</span>  /days
+                                </p>
+                            </div>
+                            
+                            <div class="booking-form">
+                                <label>Arrive</label>
+                                <input type="text" class="customize-calendar" placeholder="Arrive Date">
+                                <label>Depature</label>
+                                <input type="text" class="customize-calendar" placeholder="Departure Date">
+                                <label>Adult</label>
+                                <select class="customize-select">
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option selected>3</option>
+                                    <option>4</option>
+                                </select>
+                                <button class="btn btn-booking">Book Now</button>
+                            </div>
+
+                        </div>
+                        <!-- END / FORM BOOK -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- END / DETAIL -->
+            
+            <!-- TAB -->
+            <div class="room-detail-tab">
+                
+                <div class="row">
+                    <div class="col-md-3">
+                        <ul class="tabs">
+                            <li class="tab-link current" data-tab="overview">OVERVIEW</li>
+                            <li class="tab-link" data-tab="amenities">AMENTITIES</li>
+                        </ul>
+                    </div>
+                                    
+                    <div class="col-md-9">
+                        <div class="tabs-content">
+                            
+                            <!-- OVERVIEW -->
+                            <div class="tab-content current" id="overview">
+
+                                <div class="room-detail_overview">
+                                    <h5 class='text-uppercase
+                                    '>de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h5>
+                                    <p>Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.</p>
+
+                                    <div class="row">
+                                        <div class="col-xs-6 col-md-4">
+                                            <h6>SPECIAL ROOM</h6>
+                                            <ul>
+                                                <li>Max: 4 Person(s)</li>
+                                                <li>Size: 35 m2 / 376 ft2</li>
+                                                <li>View: Ocen</li>
+                                                <li>Bed: King-size or twin beds</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-6 col-md-4">
+                                            <h6>SERVICE ROOM</h6>
+                                            <ul>
+                                                <li>Oversized work desk</li>
+                                                <li>Hairdryer</li>
+                                                <li>Iron/ironing board upon request</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- END / OVERVIEW -->
+
+                            <!-- AMENITIES -->
+                            <div class="tab-content" id="amenities">
+                                
+                                <div class="room-detail_amenities">
+                                    <p>Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.</p>
+                                    
+                                    <div class="row">
+                                        <div class="col-xs-6 col-lg-4">
+                                            <h6>LIVING ROOM</h6>
+                                            <ul>
+                                                <li>Oversized work desk</li>
+                                                <li>Hairdryer</li>
+                                                <li>Iron/ironing board upon request</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-6 col-lg-4">
+                                            <h6>KITCHEN ROOM</h6>
+                                            <ul>
+                                                <li>AM/FM clock radio</li>
+                                                <li>Voicemail</li>
+                                                <li>High-speed Internet access</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-6 col-lg-4">
+                                            <h6>balcony</h6>
+                                            <ul>
+                                                <li>AM/FM clock radio</li>
+                                                <li>Voicemail</li>
+                                                <li>High-speed Internet access</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-6 col-lg-4">
+                                            <h6>bedroom</h6>
+                                            <ul>
+                                                <li>Coffee maker</li>
+                                                <li>25 inch or larger TV</li>
+                                                <li>Cable/satellite TV channels</li>
+                                                <li>AM/FM clock radio</li>
+                                                <li>Voicemail</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-6 col-lg-4">
+                                            <h6>bathroom</h6>
+                                            <ul>
+                                                <li>Dataport</li>
+                                                <li>Phone access fees waived</li>
+                                                <li>24-hour Concierge service</li>
+                                                <li>Private concierge</li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-xs-6 col-lg-4">
+                                            <h6>Oversized work desk</h6>
+                                            <ul>
+                                                <li>Dataport</li>
+                                                <li>Phone access fees waived</li>
+                                                <li>24-hour Concierge service</li>
+                                                <li>Private concierge</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!-- END / AMENITIES -->
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- END / TAB -->
+
+            <!-- COMPARE ACCOMMODATION -->
+            <div class="room-detail_compare" room-compare>
+                
+            </div>
+            <!-- END / COMPARE ACCOMMODATION -->
+
+        </div>
+    </section>
+    <!-- END / SHOP DETAIL -->
+    
+    <footer-directive></footer-directive>
+
+    <script type="text/javascript" src="vendor/jquery/js/jquery.js"></script>
+    <script type="text/javascript" src="vendor/jquery-ui/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="vendor/OwlCarousel/js/owl.carousel.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></script>
+
+    <!--Gallery-->
+    <script type='text/javascript' src='vendor/Camera/js/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='vendor/Camera/js/jquery.easing.1.3.js'></script> 
+    <script type='text/javascript' src='vendor/Camera/js/camera.js'></script> 
+    <!--End gallery-->
+
+    <!--Angular js-->
+    <script type="text/javascript" src="vendor/angular/js/angular.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+    
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+    	$('.owl-carousel').owlCarousel({
+		    loop:true,
+		    margin:10,
+		    responsiveClass:true,
+		    autoplay: true,
+		    responsive:{
+		        0:{
+		            items:1
+		        },
+		        600:{
+		            items:3
+		        },
+		        1000:{
+		            items:5
+		        }
+		    }
+		})
+
+		$('.gallery-image').camera({
+			height: '400px',
+			loader: 'bar',
+			pagination: false,
+			thumbnails: true
+		});
+
+		$('.customize-calendar').datepicker();
+
+        $('ul.tabs li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+
+            $('ul.tabs li').removeClass('current');
+            $('.tab-content').removeClass('current');
+
+            $(this).addClass('current');
+            $("#"+tab_id).addClass('current');
+        });
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<div class="room_container">
+
+    <h2><a href="#">{{data.name}}</a></h2>
+
+    <div class="img">
+        <a href="#"><img src="images/room-1.jpg" alt=""></a>
+    </div>
+
+    <div class="desc">
+        <p>{{data.description}}</p>
+        <ul>
+            <li>Max: {{data.persons}} Person(s)</li>
+            <li>View: {{data.view}}</li>
+            <li>Bed: {{data.bed}}</li>
+        </ul>
+    </div>
+
+    <div class="bot">
+        <span class="price">Starting <span class="amount">${{data.price}}</span> /days</span>
+        <a href="javascript:void(0);" class="btn btn-view pull-right">VIEW DETAILS</a>
+    </div>
+</div>

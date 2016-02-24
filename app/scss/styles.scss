@@ -1,0 +1,289 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600italic,600,700,700italic,900,900italic);
+@import "modules/functions";
+@import "modules/color";
+@import "partials/buttons";
+@import "partials/tabs";
+
+/*vendor*/
+@import "vendor/camera";
+
+%class-header-footer{
+	background-color: #1f232b;
+	color: #FFF;
+	// background-color: #5d963f;
+}
+
+%ul-list{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	a{
+		color: #ACACAC;
+		@include transition(all, .2s, ease);
+		
+		&:hover{
+			color: #FFF;
+			text-decoration: none;
+		}
+	}
+}
+
+
+
+::selection {
+  	background: #17898E; /* WebKit/Blink Browsers */
+  	color: #fff;
+}
+::-moz-selection {
+  	background: #17898E; /* Gecko Browsers */
+  	color: #fff;
+}
+
+body{
+	font-family: "Source Sans Pro", "Arial",sans-serif;
+	text-rendering: optimizeLegibility;
+}
+
+// styles.scss
+.navbar-default{
+	@extend %class-header-footer;
+
+	.navbar-nav li a, li a.navbar-brand{
+		color: #FFF;
+
+		&:hover{
+			color: $text-hover-default;
+		}
+	}
+}
+
+.room_container{
+	@include transition(all, .5s, ease-in-out);
+
+	img{
+		width: 100%;
+	}
+
+	a{
+		color: $text-default-heading;
+
+		&:hover{
+			text-decoration: none;
+			color: $text-hover-heading;
+		}
+	}
+
+	.desc{
+		margin-top: 15px;
+
+		ul li{
+			padding-left: 20px;
+			font-size: 14px;
+			vertical-align: top;
+			color: #232323;
+			margin: 3px 0;
+			font-weight: 500;
+		}
+	}
+
+	.bot{
+		border-top: 1px solid #e4e4e4;
+		border-bottom: 1px solid #e4e4e4;
+		line-height: 3.5em;
+
+		.btn{
+			border-radius: 0;
+			color: #FFF;
+		}		
+
+		.amount{
+			color: #333;
+			font-weight: 700;
+			font-size: 26px;
+			margin-left: 10px;
+		}
+	}
+}
+
+.room-details{
+	.booking{
+		background-color: #F1F1F1;
+		
+		.booking-info{
+			text-align: center;
+			border-bottom: 1px solid #E4E4E4;
+			padding: 20px 30px;
+		}
+
+		h6,p{
+			margin:0;
+			padding:0;
+		}
+
+		.price{
+			color: #898989;
+			font-size: 18px;
+
+			.amount{
+				font-size: 40px;
+				color: #232323;
+				font-weight: bold;
+			}
+		}
+
+		.booking-form{
+			padding: 0 30px 30px;
+
+			label{
+				display: block;
+				margin: 25px 0 10px;
+				text-transform: uppercase;
+			}
+
+			.customize-calendar, .customize-select{
+				width: 100%;
+			}
+		}
+	}
+}
+
+.room-detail-tab{
+	h6{
+		font-weight: bold;
+	}
+}
+
+.room-compare{
+	img{
+		width: 100%;
+	}
+
+	h2 a{
+		color: $text-default-heading;
+	}
+}
+
+footer{
+	@extend %class-header-footer;
+	margin-top: 30px;
+	padding: 10px 0;
+
+	a{
+		color: #acacac;
+	}
+
+	ul{
+		@extend %ul-list;
+
+		li{
+			padding: 5px 0;
+		}
+	}
+
+	.copyright{
+		line-height: 40px;
+	}
+}
+
+/*Date picker customize*/
+.ui-datepicker,
+.ui-datepicker .ui-datepicker-header {
+    padding: 0;
+    @include border-radius(0);
+}
+
+.ui-datepicker {
+    background: #fff;
+    border-width: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    width: 320px;
+    border-radius: 0
+}
+
+.ui-datepicker .ui-datepicker-header {
+    background-color: #3f5f91;
+    border-width: 0;
+    border-radius: 0
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title {
+    font-family: Montserrat;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: both;
+    line-height: 50px
+}
+
+.ui-datepicker .ui-datepicker-header .ui-corner-all {
+    position: static;
+    display: block;
+    height: inherit;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-width: 0;
+    cursor: pointer;
+    @include user-select(none);
+    @include border-radius(0);
+    @include transition(all, .3s, ease);
+}
+
+.ui-datepicker .ui-datepicker-header .ui-corner-all .ui-icon {
+    background: 0 0;
+    color: #fff;
+    text-indent: 0;
+    position: static;
+    margin: 0;
+    width: inherit;
+    height: inherit;
+    display: inline
+}
+
+.ui-datepicker .ui-datepicker-header .ui-corner-all.ui-datepicker-next {
+    float: right
+}
+
+.ui-datepicker .ui-datepicker-header .ui-corner-all.ui-state-hover {
+    background-color: #e7c130
+}
+
+.ui-datepicker .ui-datepicker-calendar {
+    width: 100%;
+    margin: 0
+}
+
+.ui-datepicker .ui-datepicker-calendar thead th {
+    text-transform: capitalize;
+    color: #8ea6d4;
+    font-family: Montserrat;
+    font-weight: 400;
+    background-color: #516d9b;
+    padding: 12px 5px
+}
+
+.ui-datepicker .ui-datepicker-calendar td a {
+    padding: 7px 5px;
+    background: 0 0;
+    color: #232323;
+    font-family: Montserrat;
+    border-width: 0;
+    text-align: center
+}
+
+.ui-datepicker .ui-datepicker-calendar td a.ui-state-active,
+.ui-datepicker .ui-datepicker-calendar td a:hover {
+    background-color: #516d9b;
+    color: #fff
+}
+
+.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today a {
+    background-color: #e7e7e7
+}
+
+.ui-datepicker .ui-datepicker-next span{
+	
+}
+
+/*---------------------*/

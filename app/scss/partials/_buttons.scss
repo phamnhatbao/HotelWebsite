@@ -1,0 +1,32 @@
+.btn-view{
+	background-color: $btn-view;
+	color: #FFF;
+	margin-top: 0.7em;
+	@include transition(all, .3s, ease);
+
+	&:hover{
+		color: #FFF;
+		background-color: $btn-hover;
+	}
+}
+
+.btn-booking{
+	@extend .btn-view;
+	border-radius: 0;
+	width: 100%;
+}
+
+.btn-compare{
+		border: 2px solid #000;
+		@include border-radius(0);
+		color: $color-default;
+		font-size: 10px;
+		font-weight: bold;
+		@include transition(all, .3s, ease);
+
+		&:hover{
+			color: #FFF;
+			background-color: $btn-hover;
+			border-color: $btn-hover;
+		}
+	}
