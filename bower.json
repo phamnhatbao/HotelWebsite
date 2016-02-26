@@ -20,16 +20,16 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.0",
-    "angular-animate": "^1.5.0",
-    "angular-route": "^1.5.0",
     "jquery": "^2.2.0",
     "animate.css": "^3.5.1",
     "bootstrap": "^3.3.6",
     "font-awesome": "fontawesome#^4.5.0",
     "OwlCarousel": "^1.3.2",
     "jquery-ui": "^1.11.4",
-    "Camera": "git://github.com/pixedelic/Camera.git"
+    "Camera": "git://github.com/pixedelic/Camera.git",
+    "angular": "1.2.25",
+    "angular-animate": "1.2.25",
+    "angular-route": "1.2.25"
   },
   "overrides": {
     "bootstrap": {

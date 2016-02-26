@@ -1,5 +1,5 @@
 (function(){
-	var app = angular.module('store',[]);
+	var app = angular.module('store',['ngRoute', "hotelControllers"]);
 
 	app.controller('appController', ['$scope', 'appService', 'appFactory', function($scope, service, appFactory){
 		
@@ -60,5 +60,20 @@
 		};
 		appFactory.data = function(){return data;};
 		return appFactory;
+	}]);
+
+	app.config(['$routeProvider', function($routeProvider) {
+		$routeProvider
+			.when('/home', {
+				templateUrl: './template/pages/home.html',
+				controller: 'homeController'
+			})
+			.when('/details/:roomID', {
+				templateUrl: './template/pages/details.html',
+				controller: 'detailsController'
+			})
+			.otherwise({
+				redirectTo: '/home'
+			});
 	}]);
 })();
