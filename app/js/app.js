@@ -1,31 +1,12 @@
 (function(){
-	var app = angular.module('store',['ngRoute', "hotelControllers"]);
-
-	app.controller('appController', ['$scope', 'appService', 'appFactory', function($scope, service, appFactory){
-		
-		appFactory.async().then(function(){
-			$scope.data = appFactory.data();
-		});
-
-		$scope.user = {};
-		
-	}]);
-
-	app.service('appService', ['$http', function ($http) {
-		
-	}]);
-
-	app.directive('footerDirective', [function () {
-		return {
-			restrict: 'E',
-			templateUrl: '../template/footer.html'
-		};
-	}]);
+	var app = angular.module('store',['ngAnimate', 'ngRoute']).run(function($rootScope) {
+	    $rootScope.loading = true;
+	});
 
 	app.directive('roomsDirective', [function () {
 		return {
 			restrict: 'EA',
-			templateUrl: '../template/item.html',
+			templateUrl: './template/directive/item.html',
 			scope: {
     			data: "="
     		}
@@ -35,45 +16,33 @@
 	app.directive('roomCompare', [function () {
 		return {
 			restrict: 'A',
-			templateUrl: '../template/room-compare.html'
+			templateUrl: '../template/directive/room-compare.html'
 		};
-	}])
-
-	app.directive('headerDirective', [function () {
-		return {
-			restrict: 'A',
-			templateUrl: '../template/header.html'
-		};
-	}])
-
-	app.factory('appFactory', ['$http', '$q', function($http, $q) {
-		var deffered = $q.defer();
-		var data = [];
-		var appFactory = {};
-
-		appFactory.async = function(){
-			$http.get('https://hotelbookingwebapp.firebaseio.com/rooms.json').success(function(response){
-				data = response;
-				deffered.resolve();
-			});
-			return deffered.promise;
-		};
-		appFactory.data = function(){return data;};
-		return appFactory;
 	}]);
 
-	app.config(['$routeProvider', function($routeProvider) {
+	app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 		$routeProvider
 			.when('/home', {
 				templateUrl: './template/pages/home.html',
-				controller: 'homeController'
+				controller: 'homeCtrl'
 			})
 			.when('/details/:roomID', {
 				templateUrl: './template/pages/details.html',
-				controller: 'detailsController'
+				controller: 'detailsCtrl'
+			})
+			.when('/bookingmanager', {
+				templateUrl: './template/pages/bookingmanager.html',
+				controller: 'bookingManagerCtrl'
+			})
+			.when('/list/:keyword/:view/:price', {
+				templateUrl: './template/pages/list.html',
+				controller: 'listCtrl'
 			})
 			.otherwise({
 				redirectTo: '/home'
 			});
+
+		// use the HTML5 History API
+        // $locationProvider.html5Mode(true);
 	}]);
 })();

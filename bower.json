@@ -29,14 +29,16 @@
     "Camera": "git://github.com/pixedelic/Camera.git",
     "angular": "1.2.25",
     "angular-animate": "1.2.25",
-    "angular-route": "1.2.25"
+    "angular-route": "1.2.25",
+    "ion.rangeslider": "ionrangeslider#^2.1.2"
   },
   "overrides": {
     "bootstrap": {
       "main": [
         "less/bootstrap.less",
         "dist/css/bootstrap.css",
-        "dist/js/bootstrap.js"
+        "dist/js/bootstrap.js",
+        "dist/fonts/*.*"
       ]
     },
     "OwlCarousel": {

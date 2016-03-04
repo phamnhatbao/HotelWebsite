@@ -3,7 +3,7 @@
     <h2><a href="#details/{{data.id}}">{{data.name}}</a></h2>
 
     <div class="img">
-        <a href="#"><img src="images/room-1.jpg" alt=""></a>
+        <a href="#details/{{data.id}}"><img src="images/room-1.jpg" alt=""></a>
     </div>
 
     <div class="desc">
@@ -17,6 +17,6 @@
 
     <div class="bot">
         <span class="price">Starting <span class="amount">${{data.price}}</span> /days</span>
-        <a href="javascript:void(0);" class="btn btn-view pull-right">VIEW DETAILS</a>
+        <a href="#details/{{data.id}}" class="btn btn-view pull-right">VIEW DETAILS</a>
     </div>
 </div>

@@ -1,0 +1,33 @@
+<div class="container">
+	<h1 class="text-center">Booking details</h1>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+	          	<th class="text-center">ID</th>
+	          	<th class="text-center">Customer</th>
+	          	<th class="text-center">Room</th>
+	          	<th class="text-center">Number Persons</th>
+	          	<th class="text-center">Arrive Date</th>
+	          	<th class="text-center">Departure Date</th>
+	          	<th class="text-center">Pay</th>
+	          	<th class="text-center">Controls</th>
+	        </tr>
+		</thead>
+		<tbody ng-repeat="item in data | orderBy:predicate:reverse">
+
+			 <tr>
+				<td class="text-center">{{item.id}}</td>
+				<td class="text-center">{{item.name}}</td>
+				<td class="text-center">{{item.roomID}}</td>
+				<td class="text-center">{{item.numberPerson}}</td>
+				<td class="text-center">{{item.startDate}}</td>
+				<td class="text-center">{{item.endDate}}</td>
+				<td class="text-center">{{item.pay}}</td>
+				<td class="text-center">
+					<button ng-click="payed(item.id)" class="btn btn-link">Payed</button>
+					<button ng-click="del(item.id)" class="btn btn-link">Remove</button>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

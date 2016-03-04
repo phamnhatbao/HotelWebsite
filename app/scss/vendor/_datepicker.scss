@@ -1,0 +1,104 @@
+.ui-datepicker,
+.ui-datepicker .ui-datepicker-header {
+    padding: 0;
+    @include border-radius(0);
+}
+
+.ui-datepicker {
+    background: #fff;
+    border-width: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+    width: 320px;
+    border-radius: 0
+}
+
+.ui-datepicker .ui-datepicker-header {
+    background-color: #3f5f91;
+    border-width: 0;
+    border-radius: 0;
+    background-image: none;
+}
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title {
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: both;
+    line-height: 50px
+}
+
+.ui-datepicker .ui-datepicker-header .ui-corner-all {
+    position: static;
+    display: block;
+    height: inherit;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-width: 0;
+    cursor: pointer;
+    @include user-select(none);
+    @include border-radius(0);
+    @include transition(all, .3s, ease);
+}
+
+.ui-datepicker .ui-datepicker-header .ui-corner-all .ui-icon {
+	background-image: none;
+    color: #fff;
+    text-indent: 0;
+    position: static;
+    margin: 0;
+    display: inline;
+}
+
+.ui-datepicker .ui-datepicker-header{
+
+    .ui-corner-all.ui-datepicker-prev {
+        float: left;
+    }
+
+    .ui-corner-all.ui-datepicker-next {
+        float: right;
+    }
+
+    .ui-corner-all.ui-state-hover {
+        background-color: #3f5f91;
+
+        &:hover{
+            text-decoration: none;
+        }
+    }
+}
+
+.ui-datepicker .ui-datepicker-calendar {
+    width: 100%;
+    margin: 0;
+
+    thead th {
+        text-transform: capitalize;
+        color: #8ea6d4;
+        font-weight: 400;
+        background-color: #516d9b;
+        padding: 12px 5px;
+    }
+
+    td a {
+        padding: 7px 5px;
+        background: 0 0;
+        color: #232323;
+        border-width: 0;
+        text-align: center
+    }
+
+    td a.ui-state-active, td a:hover {
+        background-color: #516d9b;
+        color: #fff;
+    }
+
+    td.ui-datepicker-today a {
+        background-color: #e7e7e7;
+    }
+}
+
+.ui-datepicker .ui-datepicker-next span{
+	
+}

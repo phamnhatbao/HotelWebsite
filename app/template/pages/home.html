@@ -1,6 +1,52 @@
 <section>
 	<div class="container">
+	    <!-- BEGIN SEARCH-->
+		<form class="form form-search" name="searchform" novalidate>
+			<div class="form-group">
+				<label class="control-label">Keyword</label>
+				<input type="text" ng-model="searchData.keyword" placeholder="Room name" class="form-control">
+			</div>
+			<div class="form-group">
+				<label class="control-label">View</label>
+				<select ng-model="searchData.view" placeholder="lanescape" class="form-control">
+					<option value="" label=" "></option>
+					<option value="ocean">Ocean</option>
+					<option value="Mountain">Mountain</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label class="control-label">Price</label>
+				<input name="rangprice" ng-model="searchData.price">
+				
+			</div>
+			<div class="form-group">
+				<button ng-click="search()" class="btn btn-default">Search</button>
+			</div>
+		</form>
+	    <!-- END SEARCH-->
+	</div>
+	<div class="container">
 		<div  ng-repeat="dt in data" class="col-md-6 col-sm-12" rooms-directive data="dt">
 		</div>
 	</div>
 </section>
+
+<!-- Range slider -->
+<script type="text/javascript" src="vendor/ion.rangeslider/js/ion.rangeSlider.js"></script>
+
+<script type="text/javascript">
+	$(function () {
+		$('input[name="rangprice"]').ionRangeSlider({
+            hide_min_max: true,
+            keyboard: true,
+            min: 0,
+            max: 5000,
+            from: 1000,
+            to: 4000,
+            type: 'double',
+            step: 1,
+            prefix: "$",
+            grid: true
+        });
+	});
+</script>

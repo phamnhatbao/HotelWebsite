@@ -1,4 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600italic,600,700,700italic,900,900italic);
+/*Parital*/
 .btn-view, .btn-booking {
   background-color: #526586;
   color: #FFF;
@@ -91,6 +92,100 @@ ul.tabs li {
 .camera_thumbs_cont {
   background-color: #FFF; }
 
+.ui-datepicker,
+.ui-datepicker .ui-datepicker-header {
+  padding: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0; }
+
+.ui-datepicker {
+  background: #fff;
+  border-width: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  border-radius: 0; }
+
+.ui-datepicker .ui-datepicker-header {
+  background-color: #3f5f91;
+  border-width: 0;
+  border-radius: 0;
+  background-image: none; }
+
+.ui-datepicker .ui-datepicker-header .ui-datepicker-title {
+  font-size: 16px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: both;
+  line-height: 50px; }
+
+.ui-datepicker .ui-datepicker-header .ui-corner-all {
+  position: static;
+  display: block;
+  height: inherit;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s; }
+
+.ui-datepicker .ui-datepicker-header .ui-corner-all .ui-icon {
+  background-image: none;
+  color: #fff;
+  text-indent: 0;
+  position: static;
+  margin: 0;
+  display: inline; }
+
+.ui-datepicker .ui-datepicker-header .ui-corner-all.ui-datepicker-prev {
+  float: left; }
+
+.ui-datepicker .ui-datepicker-header .ui-corner-all.ui-datepicker-next {
+  float: right; }
+
+.ui-datepicker .ui-datepicker-header .ui-corner-all.ui-state-hover {
+  background-color: #3f5f91; }
+  .ui-datepicker .ui-datepicker-header .ui-corner-all.ui-state-hover:hover {
+    text-decoration: none; }
+
+.ui-datepicker .ui-datepicker-calendar {
+  width: 100%;
+  margin: 0; }
+  .ui-datepicker .ui-datepicker-calendar thead th {
+    text-transform: capitalize;
+    color: #8ea6d4;
+    font-weight: 400;
+    background-color: #516d9b;
+    padding: 12px 5px; }
+  .ui-datepicker .ui-datepicker-calendar td a {
+    padding: 7px 5px;
+    background: 0 0;
+    color: #232323;
+    border-width: 0;
+    text-align: center; }
+  .ui-datepicker .ui-datepicker-calendar td a.ui-state-active, .ui-datepicker .ui-datepicker-calendar td a:hover {
+    background-color: #516d9b;
+    color: #fff; }
+  .ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today a {
+    background-color: #e7e7e7; }
+
 .navbar-default, footer {
   background-color: #1f232b;
   color: #FFF; }
@@ -135,8 +230,34 @@ body {
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s; }
+  .room_container:hover .img::before {
+    top: 0;
+    opacity: 1; }
   .room_container img {
     width: 100%; }
+  .room_container .img {
+    position: relative; }
+    .room_container .img::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 50%;
+      bottom: 0;
+      opacity: 0;
+      background: rgba(52, 74, 113, 0);
+      background: -webkit-linear-gradient(top, rgba(52, 74, 113, 0) 0%, rgba(52, 74, 113, 0.5) 100%);
+      background: -moz-linear-gradient(top, rgba(52, 74, 113, 0) 0%, rgba(52, 74, 113, 0.5) 100%);
+      background: -ms-linear-gradient(top, rgba(52, 74, 113, 0) 0%, rgba(52, 74, 113, 0.5) 100%);
+      background: -o-linear-gradient(top, rgba(52, 74, 113, 0) 0%, rgba(52, 74, 113, 0.5) 100%);
+      background: linear-gradient(top, rgba(52, 74, 113, 0) 0%, rgba(52, 74, 113, 0.5) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(52, 74, 113, 0)', endColorstr='rgba(52, 74, 113, 0.5)',GradientType=0 );
+      -webkit-transition: all 0.3s ease-out 0s;
+      -moz-transition: all 0.3s ease-out 0s;
+      -ms-transition: all 0.3s ease-out 0s;
+      -o-transition: all 0.3s ease-out 0s;
+      transition: all 0.3s ease-out 0s;
+      pointer-events: none; }
   .room_container a {
     color: #313131; }
     .room_container a:hover {
@@ -188,6 +309,10 @@ body {
       text-transform: uppercase; }
     .room-details .booking .booking-form .customize-calendar, .room-details .booking .booking-form .customize-select {
       width: 100%; }
+    .room-details .booking .booking-form input[type="date"], .room-details .booking .booking-form select {
+      border: none;
+      line-height: 25px;
+      padding: 0 5px; }
 
 .room-detail-tab h6 {
   font-weight: bold; }
@@ -208,103 +333,44 @@ footer {
   footer .copyright {
     line-height: 40px; }
 
-/*Date picker customize*/
-.ui-datepicker,
-.ui-datepicker .ui-datepicker-header {
-  padding: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0; }
-
-.ui-datepicker {
-  background: #fff;
-  border-width: 0;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  width: 320px;
-  border-radius: 0; }
-
-.ui-datepicker .ui-datepicker-header {
-  background-color: #3f5f91;
-  border-width: 0;
-  border-radius: 0; }
-
-.ui-datepicker .ui-datepicker-header .ui-datepicker-title {
-  font-family: Montserrat;
-  font-size: 16px;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: both;
-  line-height: 50px; }
-
-.ui-datepicker .ui-datepicker-header .ui-corner-all {
-  position: static;
-  display: block;
-  height: inherit;
-  width: 50px;
-  line-height: 50px;
-  text-align: center;
-  border-width: 0;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
-  border-radius: 0;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -ms-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s; }
-
-.ui-datepicker .ui-datepicker-header .ui-corner-all .ui-icon {
-  background: 0 0;
-  color: #fff;
-  text-indent: 0;
-  position: static;
-  margin: 0;
-  width: inherit;
-  height: inherit;
-  display: inline; }
-
-.ui-datepicker .ui-datepicker-header .ui-corner-all.ui-datepicker-next {
-  float: right; }
-
-.ui-datepicker .ui-datepicker-header .ui-corner-all.ui-state-hover {
-  background-color: #e7c130; }
-
-.ui-datepicker .ui-datepicker-calendar {
-  width: 100%;
-  margin: 0; }
-
-.ui-datepicker .ui-datepicker-calendar thead th {
-  text-transform: capitalize;
-  color: #8ea6d4;
-  font-family: Montserrat;
-  font-weight: 400;
-  background-color: #516d9b;
-  padding: 12px 5px; }
-
-.ui-datepicker .ui-datepicker-calendar td a {
-  padding: 7px 5px;
-  background: 0 0;
-  color: #232323;
-  font-family: Montserrat;
-  border-width: 0;
-  text-align: center; }
-
-.ui-datepicker .ui-datepicker-calendar td a.ui-state-active,
-.ui-datepicker .ui-datepicker-calendar td a:hover {
-  background-color: #516d9b;
-  color: #fff; }
-
-.ui-datepicker .ui-datepicker-calendar td.ui-datepicker-today a {
-  background-color: #e7e7e7; }
-
-/*---------------------*/
+@media only screen and (max-width: 760px), (min-device-width: 768px) and (max-device-width: 1024px) {
+  .container {
+    /* Force table to not be like tables anymore */
+    /* Hide table headers (but not display: none;, for accessibility) */ }
+    .container table, .container thead, .container tbody, .container th, .container td, .container tr {
+      display: block; }
+    .container thead tr {
+      display: none; }
+    .container tr {
+      border: 1px solid #ccc; }
+    .container td {
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      padding-left: 50%; }
+      .container td:before {
+        /* Now like a table header */
+        position: absolute;
+        /* Top/left values mimic padding */
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap; }
+      .container td:nth-of-type(1):before {
+        content: "ID"; }
+      .container td:nth-of-type(2):before {
+        content: "Customer"; }
+      .container td:nth-of-type(3):before {
+        content: "Room"; }
+      .container td:nth-of-type(4):before {
+        content: "Number Persons"; }
+      .container td:nth-of-type(5):before {
+        content: "Arrive Date"; }
+      .container td:nth-of-type(6):before {
+        content: "Departure Date"; }
+      .container td:nth-of-type(7):before {
+        content: "Pay"; }
+      .container td:nth-of-type(8):before {
+        content: "Controls"; } }

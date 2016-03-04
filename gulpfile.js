@@ -14,22 +14,31 @@ var browserSync = require('browser-sync').create();
 var bowerNormalizer = require('gulp-bower-normalize');
 
 // Define paths variables
-var dest_path =  './app/';
+var dest_path =  './app/vendor/';
 
 
 gulp.task('publish', function() {
     var jsFilter = gulpFilter('**/*.js', {restore: true}),
-            cssFilter = gulpFilter('**/*.css', {restore: true});
+        cssFilter = gulpFilter('**/*.css', {restore: true}),
+        fontFilter = gulpFilter(['*.eot', '*.woff', '*.svg', '*.ttf']);;
 
         gulp.src(mainBowerFiles(), { base: 'components' })
             .pipe(bowerNormalizer({ bowerJson: './bower.json' }))
             .pipe(jsFilter)
-            .pipe(uglify())
+            // .pipe(uglify())
             .pipe(jsFilter.restore)
             .pipe(cssFilter)
             .pipe(minifycss())
             .pipe(cssFilter.restore)
+
+        // grab vendor font files from components and push in /public
+        // .pipe(fontFilter)
+        // .pipe(flatten())
+        // .pipe(gulp.dest(dest_path + './app/vendor/font'));
+
             .pipe(gulp.dest('./app/vendor'));
+
+        
 });
 
 //Browser  sync

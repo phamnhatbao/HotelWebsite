@@ -1,0 +1,26 @@
+<section>
+	<div class="container">
+		<div class="col-md-12" ng-repeat="dt in data">
+	        <div class="room_container">
+	            <h2><a href="#">{{dt.name}}</a></h2>
+	            <div class="img">
+	                <a href="#details/{{dt.id}}"><img src="images/room-1.jpg" alt=""></a>
+	            </div>
+	        
+	            <div class="desc">
+	                <p>{{dt.description}}</p>
+	                <ul>
+	                    <li>Max: {{dt.persons}} Person(s)</li>
+			            <li>View: {{dt.view}}</li>
+			            <li>Bed: {{dt.bed}}</li>
+	                </ul>
+	            </div>
+	        
+	            <div class="bot">
+	                <span class="price">Starting <span class="amount">${{dt.price}}</span> /days</span>
+	                <a href="#details/{{dt.id}}" class="btn btn-view pull-right">VIEW DETAILS</a>
+	            </div>
+	        </div>
+	    </div>
+	</div>
+</section>
