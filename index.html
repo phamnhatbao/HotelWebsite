@@ -18,6 +18,8 @@
 
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/loading.css">
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+
 	<style type="text/css">
 	.owl-carousel .item {
 	    height: 10rem;
@@ -33,6 +35,9 @@
 	</style>
 </head>
 <body ng-app="store">
+	
+	<div flash-message="10000"></div>
+	
 	<div class="overlay" ng-show="loading">
 		<div class="loader">
 			<div class="loader__bar"></div>
@@ -62,9 +67,13 @@
 		                <li><a runat="server" href="contact-us.html">Contact</a></li>
 		                <li><a runat="server" href="#/bookingmanager">Booking</a></li>
 		            </ul>
-		            <ul class="nav navbar-nav navbar-right">
-		                <li><a runat="server" href="register.html">Register</a></li>
-		                <li><a runat="server" href="login.html">Log in</a></li>
+		            <ul class="nav navbar-nav navbar-right" ng-show="!logged">
+		                <li><a runat="server" href="jacscript:void(0);">Register</a></li>
+		                <li><a runat="server" href="#/login">Log in</a></li>
+		            </ul>
+		            <ul class="nav navbar-nav navbar-right" ng-show="logged">
+		                <li><a runat="server" href="javascript:void(0);">{{globals.currentUser.username}}</a></li>
+		                <li><a runat="server" href="javascript:void(0);">Logout</a></li>
 		            </ul>
 
 		        </div>
@@ -136,6 +145,8 @@
     <script type="text/javascript" src="vendor/angular/js/angular.js"></script>
     <script type="text/javascript" src="vendor/angular-animate/js/angular-animate.js"></script>
     <script type="text/javascript" src="vendor/angular-route/js/angular-route.js"></script>
+    <script type="text/javascript" src="vendor/angular-cookies/js/angular-cookies.js"></script>
+    <!-- <script type="text/javascript" src="vendor/angular-flash-alert/js/angular-flash.js"></script> -->
     <!--App files-->
     <script type="text/javascript" src="js/app.js"></script>
 
@@ -143,9 +154,12 @@
     <script type="text/javascript" src="js/controller/detailsCtrl.js"></script>
     <script type="text/javascript" src="js/controller/listCtrl.js"></script>
     <script type="text/javascript" src="js/controller/bookingManagerCtrl.js"></script>
+    <script type="text/javascript" src="js/controller/loginCtrl.js"></script>
 
     <script type="text/javascript" src="js/factory/bookingFactory.js"></script>
     <script type="text/javascript" src="js/factory/roomFactory.js"></script>
-    <!-- <script src="js/controllers.js" type="text/javascript" ></script> -->
+    <script type="text/javascript" src="js/factory/AuthenticationService.js"></script>
+    <script type="text/javascript" src="js/factory/UserService.js"></script>
+    <script type="text/javascript" src="js/modules/flashModule.js"></script>
 </body>
 </html>

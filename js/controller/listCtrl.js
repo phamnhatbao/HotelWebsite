@@ -8,20 +8,20 @@ angular.module('store').controller("listCtrl", ['$rootScope', '$scope','$http','
 		stringFilter += 'orderBy="name"&startAt="' + $routeParams.keyword + '"';
 	}
 
-	if($routeParams.view != "-" && $routeParams.keyword == '-'){
-		stringFilter += 'orderBy="view"&equalTo="' + $routeParams.view + '"';
-	}
-	else if ($routeParams.view != "-" && $routeParams.keyword != '-') {
-		stringFilter += '&orderBy="view"&equalTo="' + $routeParams.view + '"';
-	}
+	// if($routeParams.view != "-" && $routeParams.keyword == '-'){
+	// 	stringFilter += 'orderBy="view"&equalTo="' + $routeParams.view + '"';
+	// }
+	// else if ($routeParams.view != "-" && $routeParams.keyword != '-') {
+	// 	stringFilter += '&orderBy="view"&equalTo="' + $routeParams.view + '"';
+	// }
 
 
-	if($routeParams.keyword != "-" || $routeParams.view != "-"){
-		stringFilter += '&orderBy="price"&startAt=' + parseInt($routeParams.price.split(';')[0]) + '&endAt='+ parseInt($routeParams.price.split(';')[1]);
-	}
-	else{
-		stringFilter += 'orderBy="price"&startAt=' + parseInt($routeParams.price.split(';')[0]) + '&endAt='+ parseInt($routeParams.price.split(';')[1]);
-	}
+	// if($routeParams.keyword != "-" || $routeParams.view != "-"){
+	// 	stringFilter += '&orderBy="price"&startAt=' + parseInt($routeParams.price.split(';')[0]) + '&endAt='+ parseInt($routeParams.price.split(';')[1]);
+	// }
+	// else{
+	// 	stringFilter += 'orderBy="price"&startAt=' + parseInt($routeParams.price.split(';')[0]) + '&endAt='+ parseInt($routeParams.price.split(';')[1]);
+	// }
 
 	console.log(stringFilter);
 

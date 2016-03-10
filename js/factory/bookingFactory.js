@@ -52,8 +52,8 @@ angular.module('store').factory('bookingFactory', ['$http', '$q', function($http
 	      	return promise;
 	    },
 
-	    postPayedBooking: function(postData, postID){
-	    	var promise = $http.patch('https://hotelbookingwebapp.firebaseio.com/booking/' + postID + '.json?x-http-method-override=PATCH', postData)
+	    postPaidBooking: function(postData, postID){
+	    	var promise = $http.post('https://hotelbookingwebapp.firebaseio.com/booking/' + postID + '.json?x-http-method-override=PATCH', postData)
 	        .success(function (data, status, headers, config) {
 	            console.log("{'data': '" + data + "', 'status': '" + status + "', 'headers': '" + header + "', 'config': '" + config + "'}");
 	        })
