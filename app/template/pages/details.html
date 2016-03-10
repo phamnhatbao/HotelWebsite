@@ -46,9 +46,7 @@
 
                     <!-- FORM BOOK -->
                     <div class="booking">
-                        <div class="booking-info">
-                            <img src="images/icon-logo.png" alt="" class="icon-logo">
-                            
+                        <div class="booking-info">                            
                             <h6><b>BOOKING ROOM FROM</b></h6>
                             
                             <p class="price">
@@ -100,30 +98,7 @@
                         <div class="tab-content current" id="overview">
 
                             <div class="room-detail_overview">
-                                <h5 class='text-uppercase
-                                '>de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h5>
-                                <p>Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.</p>
-
-                                <div class="row">
-                                    <div class="col-xs-6 col-md-4">
-                                        <h6>SPECIAL ROOM</h6>
-                                        <ul>
-                                            <li>Max: 4 Person(s)</li>
-                                            <li>Size: 35 m2 / 376 ft2</li>
-                                            <li>View: Ocen</li>
-                                            <li>Bed: King-size or twin beds</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-6 col-md-4">
-                                        <h6>SERVICE ROOM</h6>
-                                        <ul>
-                                            <li>Oversized work desk</li>
-                                            <li>Hairdryer</li>
-                                            <li>Iron/ironing board upon request</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
+                                <p>{{data.overview}}</p>
                             </div>
 
                         </div>
@@ -133,63 +108,7 @@
                         <div class="tab-content" id="amenities">
                             
                             <div class="room-detail_amenities">
-                                <p>Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.</p>
-                                
-                                <div class="row">
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h6>LIVING ROOM</h6>
-                                        <ul>
-                                            <li>Oversized work desk</li>
-                                            <li>Hairdryer</li>
-                                            <li>Iron/ironing board upon request</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h6>KITCHEN ROOM</h6>
-                                        <ul>
-                                            <li>AM/FM clock radio</li>
-                                            <li>Voicemail</li>
-                                            <li>High-speed Internet access</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h6>balcony</h6>
-                                        <ul>
-                                            <li>AM/FM clock radio</li>
-                                            <li>Voicemail</li>
-                                            <li>High-speed Internet access</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h6>bedroom</h6>
-                                        <ul>
-                                            <li>Coffee maker</li>
-                                            <li>25 inch or larger TV</li>
-                                            <li>Cable/satellite TV channels</li>
-                                            <li>AM/FM clock radio</li>
-                                            <li>Voicemail</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h6>bathroom</h6>
-                                        <ul>
-                                            <li>Dataport</li>
-                                            <li>Phone access fees waived</li>
-                                            <li>24-hour Concierge service</li>
-                                            <li>Private concierge</li>
-                                        </ul>
-                                    </div>
-                                    <div class="col-xs-6 col-lg-4">
-                                        <h6>Oversized work desk</h6>
-                                        <ul>
-                                            <li>Dataport</li>
-                                            <li>Phone access fees waived</li>
-                                            <li>24-hour Concierge service</li>
-                                            <li>Private concierge</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
+                                <p>{{data.amentities}}</p>
                             </div>
 
                         </div>
@@ -202,6 +121,40 @@
 
         </div>
         <!-- END / TAB -->
+
+        <!-- COMMENT BOX -->
+        <div class="detailBox">
+            <div class="titleBox">
+              <label>Comment Box</label>
+                <button type="button" class="close" aria-hidden="true">&times;</button>
+            </div>
+            <div class="commentBox">
+                
+                <p class="taskDescription">Let your comment below!</p>
+            </div>
+            <div class="actionBox">
+                <ul class="commentList">
+                    <li ng-repeat="comment in data.comments">
+                        <div class="commenterImage">
+                          <img src="images/user.png" />
+                        </div>
+                        <div class="commentText">
+                            <p class="">{{comment.content}}</p> <span class="date sub-text">on {{comment.date}}</span>
+
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline" role="form">
+                    <div class="form-group">
+                        <input class="form-control" type="text" ng-model="dataComment.textComment" placeholder="Your comments" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-default" ng-click="postComment();">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- END COMMENT BOX -->
 
         <!-- COMPARE ACCOMMODATION -->
         <div class="room-detail_compare" room-compare>
@@ -240,4 +193,14 @@
             $("#"+tab_id).addClass('current');
         });
     });
+
+    // (function($) {
+    //   $.ui.datepicker.prototype.options.focus = "button";
+
+    //   $(document).on('crmLoad', function($region) {
+    //     $('input.dateplugin', $region).each(function() {
+    //       this.type = 'date';
+    //     });
+    //   });
+    // })(CRM.$);
 </script>

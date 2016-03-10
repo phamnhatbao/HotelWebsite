@@ -1,0 +1,24 @@
+<style type="text/css">
+  body{
+    overflow: hidden;
+  }
+</style>
+
+<div class="background-login">
+  <section id="content">
+    <form>
+      <h1>Login Form</h1>
+      <div>
+        <input type="text" placeholder="Username" required="" id="username" ng-model="user.username" />
+      </div>
+      <div>
+        <input type="password" placeholder="Password" required="" id="password" ng-model="user.password" />
+      </div>
+      <div>
+        <input type="submit" value="Log in" ng-click="this.login()"/>
+        <a href="javascript:void(0);">Lost your password?</a>
+        <a href="javascript:void(0);">Register</a>
+      </div>
+    </form>
+  </section>
+</div>

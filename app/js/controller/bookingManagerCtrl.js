@@ -1,4 +1,4 @@
-angular.module('store').controller("bookingManagerCtrl", ['$rootScope', '$scope','$http','$routeParams', 'bookingFactory', function($rootScope, $scope, $http, $routeParams, bookingFactory){    
+angular.module('store').controller("bookingManagerCtrl", ['Flash', '$rootScope', '$scope','$http','$routeParams', 'bookingFactory', function(Flash, $rootScope, $scope, $http, $routeParams, bookingFactory){    
 	$rootScope.loading = true;
 	$scope.data = {};
 
@@ -16,13 +16,16 @@ angular.module('store').controller("bookingManagerCtrl", ['$rootScope', '$scope'
 		});
 	};
 
-	$scope.payed = function(bookingID){
+	$scope.paid = function(bookingID){
 		var dt = {'pay': true}
-		bookingFactory.postPayedBooking(dt, bookingID).then(function(d) {
+		bookingFactory.postPaidBooking(dt, bookingID).then(function(d) {
 			if (d.status = 200) {
 				$scope.data[bookingID].pay = true;
 				$scope.data;
 			}
 		});
+
+		var message = '<strong> Well done!</strong>  You successfully read this important alert message.';
+		Flash.create('success', message);
 	};
 }]);
