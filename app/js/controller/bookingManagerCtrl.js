@@ -12,6 +12,9 @@ angular.module('store').controller("bookingManagerCtrl", ['Flash', '$rootScope',
 			if (d.status = 200) {
 				var key = bookingID;
 				delete $scope.data[key];
+
+				var message = '<strong> Well done!</strong>  You successfully delete a booking ticket.';
+				Flash.create('success', message);
 			}
 		});
 	};
@@ -25,7 +28,7 @@ angular.module('store').controller("bookingManagerCtrl", ['Flash', '$rootScope',
 			}
 		});
 
-		var message = '<strong> Well done!</strong>  You successfully read this important alert message.';
+		var message = '<strong> Well done!</strong>  You successfully change a status booking ticket.';
 		Flash.create('success', message);
 	};
 }]);
