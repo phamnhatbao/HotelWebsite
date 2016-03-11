@@ -1,6 +1,7 @@
 angular.module('store').controller("detailsCtrl", ['Flash', '$rootScope', '$scope','$http','$routeParams', 'roomFactory', 'bookingFactory', function(Flash, $rootScope, $scope, $http, $routeParams, roomFactory, bookingFactory){    
 	$rootScope.loading = true;
 	$scope.data = {};
+	$scope.lstRooms = {};
 	$scope.senddata = {};
 
 	$scope.dataComment = {};
@@ -9,6 +10,13 @@ angular.module('store').controller("detailsCtrl", ['Flash', '$rootScope', '$scop
 	    $scope.data = d;
 	    $rootScope.loading = false;
 	});
+
+	roomFactory.getRooms().then(function(d) {
+	    $scope.lstRooms = d;
+
+	    $rootScope.loading = false;
+	});
+
 
 	$scope.SendData = function() {
     	//forms user object
