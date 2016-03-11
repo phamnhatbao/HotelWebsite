@@ -15,13 +15,6 @@
 		};
 	}]);
 
-	app.directive('roomCompare', [function () {
-		return {
-			restrict: 'A',
-			templateUrl: '../template/directive/room-compare.html'
-		};
-	}]);
-
 	app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
 		$routeProvider
 			.when('/home', {

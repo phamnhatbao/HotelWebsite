@@ -1,0 +1,102 @@
+{
+    "rooms": {
+        "rID01": {
+            "id": "rID01",
+            "name": "Luxury Room",
+            "description": "This is description of Luxury rooms",
+            "overview": "Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.",
+            "amentities": "Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.",
+            "persons": 4,
+            "view": "ocean",
+            "bed": "King-size or twin beds",
+            "price": 1900,
+            "available": "false"
+        },
+        "rID02": {
+            "id": "rID02",
+            "name": "North Room",
+            "description": "This is description of North rooms",
+            "overview": "Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.",
+            "amentities": "Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.",
+            "persons": 2,
+            "view": "moutain",
+            "bed": "King-size or twin beds",
+            "comments":{
+                "cmID01":{
+                    "content": "This room is beautiful",
+                    "date": "03/11/2015"
+                },
+                "cmID02":{
+                    "content": "This room wonderfull room. We need it",
+                    "date": "03/13/2015"
+                }
+            },
+            "price": 1600,
+            "available": "true"
+        },
+        "rID03": {
+            "id": "rID03",
+            "name": "Family Room",
+            "persons": 7,
+            "description": "This is description of Family rooms",
+            "overview": "Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.",
+            "amentities": "Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.",
+            "view": "delta",
+            "bed": "King-size or twin beds",
+            "price": 2000,
+            "available": "false"
+        },
+        "rID04": {
+            "id": "rID04",
+            "name": "Couple Room",
+            "persons": 7,
+            "description": "This is description of couple rooms",
+            "overview": "Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.",
+            "amentities": "Located in the heart of Aspen with a unique blend of contemporary luxury and historic heritage, deluxe accommodations, superb amenities, genuine hospitality and dedicated service for an elevated experience in the Rocky Mountains.",
+            "view": "delta",
+            "bed": "King-size or twin beds",
+            "price": 1000,
+            "available": "true"
+        }
+    },
+    "booking": {
+        "bID01": {
+            "id": "bID01",
+            "name": "Mrs Linh",
+            "roomID": 1,
+            "startDate": "10-11-2015",
+            "endDate": "14-11-2015",
+            "numberPerson": 5,
+            "price": 1900,
+            "pay": false
+        },
+        "bID02": {
+            "id": "bID02",
+            "name": "Mr Wiz",
+            "roomID": 1,
+            "startDate": "20-10-2015",
+            "endDate": "24-10-2015",
+            "numberPerson": 4,
+            "price": 1900,
+            "pay": false
+        },
+        "bID03": {
+            "id": "bID03",
+            "name": "Mr John",
+            "roomID": 3,
+            "startDate": "15-03-2016",
+            "endDate": "17-03-2016",
+            "numberPerson": 3,
+            "price": 1900,
+            "pay": false
+        }
+    },
+    "users": {
+        "admin": {
+            "id": "uID01",
+            "username": "admin",
+            "password": "123456",
+            "active": true
+        }
+    }
+}
