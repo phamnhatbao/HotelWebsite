@@ -252,7 +252,7 @@ ul.tabs li {
     background-color: #e7e7e7; }
 
 .navbar-default, footer {
-  background-color: #1f232b;
+  background-color: #344a71;
   color: #FFF; }
 
 footer ul {
@@ -283,11 +283,14 @@ footer ul {
 body {
   font-family: "Source Sans Pro", "Arial",sans-serif;
   text-rendering: optimizeLegibility;
-  font-size: 1.2em; }
+  font-size: 14px; }
 
-.navbar-default .navbar-nav li a, .navbar-default li a.navbar-brand {
+.owl-carousel img {
+  width: 100%; }
+
+.navbar-default .navbar-nav li a, .navbar-default a.navbar-brand {
   color: #FFF; }
-  .navbar-default .navbar-nav li a:hover, .navbar-default li a.navbar-brand:hover {
+  .navbar-default .navbar-nav li a:hover, .navbar-default a.navbar-brand:hover {
     color: #BEC87A; }
 
 .room_container {
@@ -348,7 +351,7 @@ body {
     .room_container .bot .amount {
       color: #333;
       font-weight: 700;
-      font-size: 26px;
+      font-size: 1.5em;
       margin-left: 10px; }
 
 .room-details .booking {
@@ -364,7 +367,7 @@ body {
     color: #898989;
     font-size: 18px; }
     .room-details .booking .price .amount {
-      font-size: 40px;
+      font-size: 1.5em;
       color: #232323;
       font-weight: bold; }
   .room-details .booking .booking-form {
@@ -388,6 +391,9 @@ body {
 
 .room-compare h2 a {
   color: #313131; }
+
+.list-room-compare .item-room-compare {
+  margin-bottom: 15px; }
 
 footer {
   margin-top: 30px;

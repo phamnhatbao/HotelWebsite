@@ -16,6 +16,9 @@
     <link rel="stylesheet" type="text/css"  href="vendor/ion.rangeslider/css/ion.rangeSlider.css"></link>
     <link rel="stylesheet" type="text/css"  href="vendor/ion.rangeslider/css/ion.rangeSlider.skinFlat.css"></link>
 
+    <link rel="stylesheet" type="text/css"  href="vendor/OwlCarousel/css/owl.carousel.css"></link>
+    <link rel="stylesheet" type="text/css"  href="vendor/OwlCarousel/css/owl.theme.css"></link>
+
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" type="text/css" href="css/loading.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
@@ -38,7 +41,7 @@
 	
 	<div flash-message="10000"></div>
 	
-	<div class="overlay" ng-show="loading">
+	<!-- <div class="overlay" ng-show="loading">
 		<div class="loader">
 			<div class="loader__bar"></div>
 			<div class="loader__bar"></div>
@@ -47,7 +50,7 @@
 			<div class="loader__bar"></div>
 			<div class="loader__ball"></div>
 		</div>
-	</div>
+	</div> -->
 	<header id="header">
 		<!-- HEADER LOGO & MENU -->
 		<div class="navbar navbar-default" role="navigation">
@@ -84,8 +87,25 @@
 		<!-- HEADER TOP -->
 		<div class="header_top">
 		    <div class="container">
-		        <div class="header_left float-left">
-		            <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=10.75548&lon=-106.67332&name=Ho Chi Minh&color=#344a71&font=Georgia&units=uk"> </iframe>
+		        <div class="header_left">
+					<div class="owl-carousel owl-theme">
+						<div>
+							<img src="images/sliders/slider1.jpg" alt="">
+						</div>
+						<div>
+							<img src="images/sliders/slider4.jpg" alt="">
+						</div>
+						<div>
+							<img src="images/sliders/slider5.jpg" alt="">
+						</div>
+						<div>
+							<img src="images/sliders/slider6.jpg" alt="">
+						</div>
+						<div>
+							<img src="images/sliders/slider7.jpg" alt="">
+						</div>
+					</div>
+		            <!-- <iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=10.75548&lon=-106.67332&name=Ho Chi Minh&color=#344a71&font=Georgia&units=uk"> </iframe> -->
 		        </div>
 		    </div>
 		</div>
@@ -105,7 +125,7 @@
     <script type="text/javascript" src="vendor/jquery/js/jquery.js"></script>
     <script type="text/javascript" src="vendor/jquery-ui/js/jquery-ui.js"></script>
     <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.js"></script>
-    
+    <script type="text/javascript" src="vendor/OwlCarousel/js/owl.carousel.js"></script>
 
     <!--Angular js-->
     <script type="text/javascript" src="vendor/angular/js/angular.js"></script>
@@ -127,5 +147,14 @@
     <script type="text/javascript" src="js/factory/AuthenticationService.js"></script>
     <script type="text/javascript" src="js/factory/UserService.js"></script>
     <script type="text/javascript" src="js/modules/flashModule.js"></script>
+
+    <script type="text/javascript">
+    	$(document).ready(function(){
+		  	$('.owl-carousel').owlCarousel({
+		  		items:1,
+		  		autoWidth:true
+		  	});
+		});
+    </script>
 </body>
 </html>

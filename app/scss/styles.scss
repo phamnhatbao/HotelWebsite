@@ -12,7 +12,7 @@
 @import "vendor/datepicker";
 
 %class-header-footer{
-	background-color: #1f232b;
+	background-color: #344a71;
 	color: #FFF;
 	// background-color: #5d963f;
 }
@@ -47,14 +47,18 @@
 body{
 	font-family: "Source Sans Pro", "Arial",sans-serif;
 	text-rendering: optimizeLegibility;
-	font-size: 1.2em;
+	font-size: 14px;
 }
 
 // styles.scss
+.owl-carousel{
+	img{width: 100%;}
+}
+
 .navbar-default{
 	@extend %class-header-footer;
 
-	.navbar-nav li a, li a.navbar-brand{
+	.navbar-nav li a, a.navbar-brand{
 		color: #FFF;
 
 		&:hover{
@@ -128,7 +132,7 @@ body{
 		.amount{
 			color: #333;
 			font-weight: 700;
-			font-size: 26px;
+			font-size: 1.5em;
 			margin-left: 10px;
 		}
 	}
@@ -154,7 +158,7 @@ body{
 			font-size: 18px;
 
 			.amount{
-				font-size: 40px;
+				font-size: 1.5em;
 				color: #232323;
 				font-weight: bold;
 			}
@@ -195,6 +199,12 @@ body{
 
 	h2 a{
 		color: $text-default-heading;
+	}
+}
+
+.list-room-compare{
+	.item-room-compare{
+		margin-bottom: 15px;
 	}
 }
 
